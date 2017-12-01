@@ -74,6 +74,8 @@ public class HistoryPageFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_history_page, container, false);
         listView = rootView.findViewById(R.id.historyList);
 
+        MainActivity main = (MainActivity) getActivity();
+        listView.setAdapter(main.adapter);
         return rootView;
     }
 

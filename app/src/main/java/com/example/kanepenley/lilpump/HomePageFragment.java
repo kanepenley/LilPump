@@ -1,14 +1,18 @@
 package com.example.kanepenley.lilpump;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -46,6 +50,7 @@ public class HomePageFragment extends Fragment {
         HomePageFragment fragment = new HomePageFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -54,6 +59,7 @@ public class HomePageFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
         }
+
     }
 
     @Override
@@ -61,6 +67,7 @@ public class HomePageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_home_page, container, false);
+
         return rootView;
     }
 
@@ -95,9 +102,5 @@ public class HomePageFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    public void sendToLilPump(View view) {
-
     }
 }
